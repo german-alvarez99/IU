@@ -14,10 +14,17 @@ public class MainActivity2 extends AppCompatActivity {
 
         //Localizar los controles
         TextView lblSaludo = (TextView)findViewById(R.id.lblSaludo);
+        TextView lblGenero = (TextView)findViewById(R.id.lblGenero2);
+        TextView lblFecha = (TextView)findViewById(R.id.lblFecha2);
+        TextView lbltelefono = (TextView)findViewById(R.id.lblTelefono2);
+
         //Recuperamos la información pasada en el intent
         Bundle bundle = this.getIntent().getExtras();
 
         //Construimos el mensaje a mostrar
-        lblSaludo.setText("Hola!, Bienvenido \n " + bundle.getString("NOMBRE"));
+        lblSaludo.setText(bundle.getString("NOMBRE"));
+        lblGenero.setText(bundle.getString("GENERO"));
+        lblFecha.setText(bundle.getString("FECHA"));
+        lbltelefono.setText(bundle.getString("TELEFONO"));
     }
 }
